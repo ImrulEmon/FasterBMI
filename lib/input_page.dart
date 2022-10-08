@@ -10,6 +10,8 @@ class InputPage extends StatefulWidget {
 
 class _InputPageState extends State<InputPage> {
   Gender selectedCard = Gender.male;
+  int sliderValue = 100;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -107,6 +109,52 @@ class _InputPageState extends State<InputPage> {
                 children: [
                   Expanded(
                     child: Container(
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Text(
+                            'HEIGHT',
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 20,
+                            ),
+                          ),
+                          Row(
+                            mainAxisSize: MainAxisSize.min,
+                            crossAxisAlignment: CrossAxisAlignment.baseline,
+                            textBaseline: TextBaseline.alphabetic,
+                            children: [
+                              Text(
+                                sliderValue.toString(),
+                                style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 38,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                              Text(
+                                'cm',
+                                style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 20,
+                                  //fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                            ],
+                          ),
+                          Slider(
+                            value: sliderValue.toDouble(),
+                            min: 1.00,
+                            max: 400.00,
+                            onChanged: (value) {
+                              setState(() {
+                                sliderValue = value.toInt();
+                              });
+                            },
+                            inactiveColor: Colors.white,
+                          ),
+                        ],
+                      ),
                       margin: EdgeInsets.all(10),
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10),
