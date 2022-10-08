@@ -11,6 +11,8 @@ class InputPage extends StatefulWidget {
 class _InputPageState extends State<InputPage> {
   Gender selectedCard = Gender.male;
   int sliderValue = 100;
+  int weight = 50;
+  int age = 30;
 
   @override
   Widget build(BuildContext context) {
@@ -171,6 +173,45 @@ class _InputPageState extends State<InputPage> {
                 children: [
                   Expanded(
                     child: Container(
+                      child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Text(
+                              'WEIGHT',
+                              style: TextStyle(
+                                color: Colors.white,
+                              ),
+                            ),
+                            Text(
+                              '$weight',
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 50,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                              children: [
+                                CircleAvatar(
+                                  backgroundColor: Colors.white,
+                                  radius: 25,
+                                  child: Icon(
+                                    FontAwesomeIcons.plus,
+                                    color: Colors.lightBlue,
+                                  ),
+                                ),
+                                CircleAvatar(
+                                  backgroundColor: Colors.white,
+                                  radius: 25,
+                                  child: Icon(
+                                    FontAwesomeIcons.minus,
+                                    color: Colors.lightBlue,
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ]),
                       margin: EdgeInsets.all(10),
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10),
@@ -180,6 +221,45 @@ class _InputPageState extends State<InputPage> {
                   ),
                   Expanded(
                     child: Container(
+                      child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Text(
+                              'AGE',
+                              style: TextStyle(
+                                color: Colors.white,
+                              ),
+                            ),
+                            Text(
+                              '$age',
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 50,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                              children: [
+                                CircleAvatar(
+                                  backgroundColor: Colors.white,
+                                  radius: 25,
+                                  child: Icon(
+                                    FontAwesomeIcons.plus,
+                                    color: Colors.lightBlue,
+                                  ),
+                                ),
+                                CircleAvatar(
+                                  backgroundColor: Colors.white,
+                                  radius: 25,
+                                  child: Icon(
+                                    FontAwesomeIcons.minus,
+                                    color: Colors.lightBlue,
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ]),
                       margin: EdgeInsets.all(10),
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10),
