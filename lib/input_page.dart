@@ -193,20 +193,34 @@ class _InputPageState extends State<InputPage> {
                             Row(
                               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                               children: [
-                                CircleAvatar(
-                                  backgroundColor: Colors.white,
-                                  radius: 25,
-                                  child: Icon(
-                                    FontAwesomeIcons.plus,
-                                    color: Colors.lightBlue,
+                                GestureDetector(
+                                  onTap: () {
+                                    setState(() {
+                                      weight++;
+                                    });
+                                  },
+                                  child: CircleAvatar(
+                                    backgroundColor: Colors.white,
+                                    radius: 25,
+                                    child: Icon(
+                                      FontAwesomeIcons.plus,
+                                      color: Colors.lightBlue,
+                                    ),
                                   ),
                                 ),
-                                CircleAvatar(
-                                  backgroundColor: Colors.white,
-                                  radius: 25,
-                                  child: Icon(
-                                    FontAwesomeIcons.minus,
-                                    color: Colors.lightBlue,
+                                GestureDetector(
+                                  onTap: () {
+                                    setState(() {
+                                      weight--;
+                                    });
+                                  },
+                                  child: CircleAvatar(
+                                    backgroundColor: Colors.white,
+                                    radius: 25,
+                                    child: Icon(
+                                      FontAwesomeIcons.minus,
+                                      color: Colors.lightBlue,
+                                    ),
                                   ),
                                 ),
                               ],
@@ -241,20 +255,34 @@ class _InputPageState extends State<InputPage> {
                             Row(
                               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                               children: [
-                                CircleAvatar(
-                                  backgroundColor: Colors.white,
-                                  radius: 25,
-                                  child: Icon(
-                                    FontAwesomeIcons.plus,
-                                    color: Colors.lightBlue,
+                                GestureDetector(
+                                  onTap: () {
+                                    setState(() {
+                                      age++;
+                                    });
+                                  },
+                                  child: CircleAvatar(
+                                    backgroundColor: Colors.white,
+                                    radius: 25,
+                                    child: Icon(
+                                      FontAwesomeIcons.plus,
+                                      color: Colors.lightBlue,
+                                    ),
                                   ),
                                 ),
-                                CircleAvatar(
-                                  backgroundColor: Colors.white,
-                                  radius: 25,
-                                  child: Icon(
-                                    FontAwesomeIcons.minus,
-                                    color: Colors.lightBlue,
+                                GestureDetector(
+                                  onTap: () {
+                                    setState(() {
+                                      age--;
+                                    });
+                                  },
+                                  child: CircleAvatar(
+                                    backgroundColor: Colors.white,
+                                    radius: 25,
+                                    child: Icon(
+                                      FontAwesomeIcons.minus,
+                                      color: Colors.lightBlue,
+                                    ),
                                   ),
                                 ),
                               ],
