@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'enum_file.dart';
+import 'package:fasterbmi/results_page.dart';
 
 class InputPage extends StatefulWidget {
   @override
@@ -298,17 +299,31 @@ class _InputPageState extends State<InputPage> {
                 ],
               ), //Row 3
             ),
-            Container(
-              color: Colors.blue,
-              height: 80,
-              width: double.infinity,
-              child: Center(
-                child: Text(
-                  'Calculate BMI',
-                  style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    color: Colors.white,
-                    fontSize: 22,
+            GestureDetector(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => ResultsPage(
+                      height: sliderValue,
+                      weight: weight,
+                      age: age,
+                    ),
+                  ),
+                );
+              },
+              child: Container(
+                color: Colors.blue,
+                height: 80,
+                width: double.infinity,
+                child: Center(
+                  child: Text(
+                    'Calculate BMI',
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      color: Colors.white,
+                      fontSize: 22,
+                    ),
                   ),
                 ),
               ),
